@@ -1,7 +1,16 @@
 import React from "react";
+import "./styles/global.scss";
 
 function App() {
-  return <div className="App">Hello Mi Shop</div>;
+  return (
+    <div
+      style={{
+        fontSize: "1.4rem"
+      }}
+    >
+      Hello Mi Shop
+    </div>
+  );
 }
 
 export default App;
