@@ -1,0 +1,23 @@
+{
+  "name": "mi-shop",
+  "version": "1.0.0",
+  "description": "仿小米商城全栈项目，包括h5, 微信小程序，Android, SSR, Node后端",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "git": "git add . && git commit -m",
+    "postgit": "git pull && git push && git status"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnscorpions/mi-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnscorpions/mi-shop/issues"
+  },
+  "homepage": "https://github.com/cnscorpions/mi-shop#readme"
+}
