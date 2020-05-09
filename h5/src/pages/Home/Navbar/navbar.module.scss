@@ -1,0 +1,86 @@
+@import "styles/global.scss";
+
+.container {
+  position: relative;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 3rem;
+  background: #f2f2f2;
+  .nav-item {
+    flex: 1;
+    @include centerIt;
+    color: rgb(116, 116, 116);
+    border-color: rgb(242, 242, 242);
+    font-size: 1.4rem;
+    &-text {
+      display: block;
+      height: 3rem;
+      line-height: 3rem;
+    }
+  }
+  .nav-collapse {
+    @include centerIt;
+    flex: 1;
+  }
+  .nav-collapse > img {
+    width: 1.6rem;
+  }
+  .active {
+    color: rgb(237, 91, 0);
+    border-bottom: 2px solid rgb(237, 91, 0);
+  }
+}
+
+.nav-layer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #eee;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 0 1.3rem;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  &-title {
+    padding-top: 1.4rem;
+  }
+  &-arrow-up {
+    position: absolute;
+    right: 1.6rem;
+    top: 0.8rem;
+    width: 1.6rem;
+  }
+  &-btn-group {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1.7rem;
+    &-btn {
+      display: inline-block;
+      margin: 0 0.6rem 1rem 0;
+      width: 7.7rem;
+      height: 2.7rem;
+      text-align: center;
+      line-height: 2.7rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 0.4rem;
+      font-size: 1.3rem;
+      background-color: #fff;
+    }
+    &-btn_active {
+      background-color: #fde0d5;
+      border-color: #ff6700;
+      color: #ff6700;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

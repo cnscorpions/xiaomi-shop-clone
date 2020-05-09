@@ -10,3 +10,12 @@ body {
 a {
   text-decoration: none;
 }
+
+/**
+* 水平垂直居中
+*/
+@mixin centerIt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

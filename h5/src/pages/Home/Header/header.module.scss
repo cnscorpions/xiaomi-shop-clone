@@ -1,0 +1,38 @@
+.search-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 4.4rem;
+  background: #f2f2f2;
+  color: #666;
+  &-icon {
+    display: flex;
+    justify-content: center;
+    width: 5.2rem;
+    margin: 0 1rem;
+  }
+  &-icon > img {
+    width: 2.5rem;
+  }
+  &-input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    text-align: left;
+    padding: 0.8rem 0;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    border-radius: 0.04rem;
+    font-size: 1.6rem;
+  }
+  &-input > img {
+    margin: 0 0.4rem;
+    width: 1.6rem;
+  }
+  &-user > img {
+    margin: 0 1rem;
+    width: 2.4rem;
+  }
+}
