@@ -59,6 +59,7 @@ const Tabbar = props => {
               className={styles["icon"]}
               src={tab.url === selectedTab ? tab.iconActive : tab.icon}
               alt={tab.text}
+              onClick={() => console.log(tab.url)}
             />
             <span
               className={

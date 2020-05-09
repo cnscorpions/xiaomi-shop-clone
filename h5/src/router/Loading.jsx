@@ -1,7 +1,11 @@
 import React from "react";
 import FadeLoader from "react-spinners/FadeLoader";
 
-import * as styles from "./loading.module.scss";
+const containerStyle = {
+  display: "flex",
+  justifyContent: "center",
+  alignSelf: "center"
+};
 
 export default function Loading(props) {
   if (props.error) {
@@ -12,7 +16,7 @@ export default function Loading(props) {
     );
   } else if (props.pastDelay) {
     return (
-      <div className={styles["container"]}>
+      <div className={containerStyle}>
         <FadeLoader loading={true} color="#9b9b9b" />
       </div>
     );

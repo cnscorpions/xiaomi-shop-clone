@@ -1,6 +1,6 @@
 import React from "react";
 import Loadable from "react-loadable";
-import Loading from "components/Loading/Loading";
+import Loading from "./Loading";
 
 const Home = Loadable({
   loader: () => import("pages/Home/Home"),
