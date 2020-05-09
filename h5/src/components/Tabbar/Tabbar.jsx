@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import * as actionCreators from "store/actionCreators/index";
 
 import * as styles from "./tabbar.module.scss";
 
@@ -48,7 +50,9 @@ const tabs = [
 ];
 
 const Tabbar = props => {
-  const [selectedTab, setSelectedTab] = useState("/");
+  // 获取tab状态
+  const selectedTab = useSelector(state => state.common.selectedTab);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -59,7 +63,9 @@ const Tabbar = props => {
               className={styles["icon"]}
               src={tab.url === selectedTab ? tab.iconActive : tab.icon}
               alt={tab.text}
-              onClick={() => console.log(tab.url)}
+              onClick={() =>
+                dispatch(actionCreators.selectTabActionCreator(tab.url))
+              }
             />
             <span
               className={
