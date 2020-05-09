@@ -1,11 +1,11 @@
 import React from "react";
 import Tabbar from "components/Tabbar/Tabbar";
 
-export default function Home() {
+export default function User() {
   return (
-    <>
-      <h2>Home</h2>
+    <div>
+      User
       <Tabbar />
-    </>
+    </div>
   );
 }

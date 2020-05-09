@@ -1,19 +1,10 @@
 import React from "react";
 
-import Home from "pages/Home/Home";
+import AppRouter from "router/AppRouter";
 import "./styles/global.scss";
 
 function App() {
-  return (
-    <div
-      style={{
-        fontSize: "1.4rem"
-      }}
-    >
-      Hello Mi Shop
-      <Home />
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;
