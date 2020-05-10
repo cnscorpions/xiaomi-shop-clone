@@ -13,3 +13,8 @@ export const selectNavActionCreator = nav => ({
 export const hideDownloadAppBanner = () => ({
   type: types.HIDE_DOWNLOAD_APP_BANNER
 });
+
+export const addSearchHistory = history => ({
+  type: types.ADD_SEARCH_HISTORY,
+  payload: history
+});

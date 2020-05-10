@@ -6,6 +6,8 @@ import { Routes } from "./router.config";
 import AppLayout from "components/Layout/AppLayout";
 import NotFound from "pages/NotFound/NotFound";
 import LandingPage from "pages/LandingPage/LandingPage";
+import Search from "pages/Search/Search";
+import List from "pages/List/List";
 
 export default function AppRouter(props) {
   return (
@@ -18,6 +20,12 @@ export default function AppRouter(props) {
         ))}
         <Route exact path="/download">
           <LandingPage />
+        </Route>
+        <Route exact path="/search">
+          <Search />
+        </Route>
+        <Route exact path="/list">
+          <List />
         </Route>
         <Route path="*">
           <NotFound />

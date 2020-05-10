@@ -13,21 +13,25 @@ export default function Header() {
     history.push("/user");
   };
 
+  const goToSearchPage = () => {
+    history.push("/search");
+  };
+
   return (
-    <>
-      <div className={styles["search-container"]}>
-        <div className={styles["search-container-icon"]}>
-          <img src={miIconPath} alt="小米" />
-        </div>
-        <div className={styles["search-container-input"]}>
-          <img src={searchIconPath} />
-          搜索商品名称
-        </div>
-        <div className={styles["search-container-user"]}>
-          <img src={userIconPath} alt="用户" onClick={goToUser} />
-        </div>
+    <div className={styles["search-container"]}>
+      <div className={styles["search-container-icon"]}>
+        <img src={miIconPath} alt="小米" />
       </div>
-      <div></div>
-    </>
+      <div
+        className={styles["search-container-input"]}
+        onClick={goToSearchPage}
+      >
+        <img src={searchIconPath} />
+        搜索商品名称
+      </div>
+      <div className={styles["search-container-user"]}>
+        <img src={userIconPath} alt="用户" onClick={goToUser} />
+      </div>
+    </div>
   );
 }
