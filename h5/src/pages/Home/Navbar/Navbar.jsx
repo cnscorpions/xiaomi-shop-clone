@@ -16,7 +16,7 @@ const navItems = [
   },
   {
     text: "智能",
-    key: "smart device"
+    key: "smartDevice"
   },
   {
     text: "电视",
@@ -28,7 +28,7 @@ const navItems = [
   },
   {
     text: "家电",
-    key: "household appliances"
+    key: "appliance"
   },
   {
     text: "生活周边",
