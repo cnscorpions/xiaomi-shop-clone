@@ -5,6 +5,7 @@ import { Routes } from "./router.config";
 
 import AppLayout from "components/Layout/AppLayout";
 import NotFound from "pages/NotFound/NotFound";
+import LandingPage from "pages/LandingPage/LandingPage";
 
 export default function AppRouter(props) {
   return (
@@ -15,6 +16,9 @@ export default function AppRouter(props) {
             <AppLayout content={<route.component />} />
           </PrivateRoute>
         ))}
+        <Route exact path="/download">
+          <LandingPage />
+        </Route>
         <Route path="*">
           <NotFound />
         </Route>

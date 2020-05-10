@@ -51,7 +51,7 @@ const tabs = [
 
 const Tabbar = props => {
   // 获取tab状态
-  const selectedTab = useSelector(state => state.common.selectedTab);
+  const selectedTab = useSelector(state => state.home.selectedTab);
   const dispatch = useDispatch();
 
   return (
