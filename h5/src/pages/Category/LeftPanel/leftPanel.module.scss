@@ -1,0 +1,37 @@
+.container {
+  position: fixed;
+  top: 5rem;
+  bottom: 5.2rem;
+  left: 0;
+  border-right: 1px solid #efefef;
+  width: 7.8rem;
+  background: aqua;
+  overflow: hidden;
+}
+
+.list-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -1.5rem;
+  padding: 1rem 1.5rem 1rem 0;
+  background: #fefefe;
+  overflow-y: auto;
+  z-index: 90;
+  .list-item {
+    height: 4.6rem;
+    line-height: 4.6rem;
+    &-text {
+      display: block;
+      height: 100%;
+      font-size: 1.3rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    &_active {
+      color: #fb7d34;
+      transform: scale(1.2);
+    }
+  }
+}

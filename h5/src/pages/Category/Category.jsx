@@ -2,7 +2,8 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 import Header from "components/Header/Header";
-import LeftPanel from "./LeftPanel";
+import LeftPanel from "./LeftPanel/LeftPanel";
+import RightPanel from "./RightPanel/RightPanel";
 
 export default function Category() {
   const history = useHistory();
@@ -18,8 +19,9 @@ export default function Category() {
   return (
     <>
       <Header title={"分类"} goBack={goBack} goSearch={goSearch} />
-      <div>
+      <div style={{ marginTop: "5rem" }}>
         <LeftPanel />
+        <RightPanel />
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import rootReducer from "./reducers/index";
 const persistConfig = {
   key: "root",
   storage: storageSession,
-  whitelist: ["common", "home", "search"],
+  whitelist: ["common", "home", "search", "category"],
   debug: true
 };
 

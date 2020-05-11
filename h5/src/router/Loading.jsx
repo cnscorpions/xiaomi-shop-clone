@@ -11,7 +11,7 @@ export default function Loading(props) {
   if (props.error) {
     return (
       <div>
-        Error! <button onClick={props.retry}>Retry</button>
+        错误! <button onClick={props.retry}>重试</button>
       </div>
     );
   } else if (props.pastDelay) {

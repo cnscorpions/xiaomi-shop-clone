@@ -1,0 +1,58 @@
+@import "styles/global.scss";
+
+.wrapper {
+  padding-left: 9.5rem;
+  padding-right: 1.6rem;
+  .banner-img {
+    width: 26rem;
+    height: auto;
+  }
+  .section-title {
+    @include centerIt;
+    background: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 1rem;
+    height: 6.6rem;
+    height: 6.6rem;
+    overflow: hidden;
+  }
+  .section-title > span {
+    position: relative;
+  }
+  .section-title > span::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2rem;
+    border-top: 1px solid #e0e0e0;
+    content: "";
+    transform: translate3d(-150%, -50%, 0);
+  }
+  .section-title > span::after {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 0;
+    width: 2rem;
+    border-top: 1px solid #e0e0e0;
+    content: "";
+    transform: translate3d(150%, -50%, 0);
+  }
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    .product-box {
+      @include centerIt;
+      flex-direction: column;
+      margin: 1rem 0 1.5rem 0;
+      width: 33.3%;
+      &-img {
+        margin-bottom: 1.5rem;
+        width: 5.2rem;
+        height: auto;
+      }
+    }
+  }
+}

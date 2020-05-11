@@ -22,3 +22,8 @@ export const addSearchHistory = history => ({
 export const removeAllSearchHistory = () => ({
   type: types.REMOVE_ALL_SEARCH_HISTORY
 });
+
+export const setCate = cate => ({
+  type: types.SET_CATE,
+  payload: cate
+});
