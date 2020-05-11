@@ -1,6 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { store } from "store/index";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "store/index";
 
 import AppRouter from "router/AppRouter";
 import "./styles/global.scss";
@@ -8,7 +9,9 @@ import "./styles/global.scss";
 function App() {
   return (
     <Provider store={store}>
-      <AppRouter />
+      <PersistGate loading={null} persistor={persistor}>
+        <AppRouter />
+      </PersistGate>
     </Provider>
   );
 }

@@ -11,6 +11,12 @@ const SearchReducer = createReducer(initialState, {
       ...state,
       historyList: [...state.historyList, action.payload]
     };
+  },
+  [types.REMOVE_ALL_SEARCH_HISTORY]: (state = initialState, action) => {
+    return {
+      ...state,
+      historyList: []
+    };
   }
 });
 

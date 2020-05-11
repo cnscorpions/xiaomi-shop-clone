@@ -1,5 +1,6 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import * as actionCreators from "store/actionCreators/index";
 import deleteIcon from "assets/search/delete.png";
 
 const styles = {
@@ -43,12 +44,23 @@ const styles = {
 
 export default function History() {
   const tags = useSelector(state => state.search.historyList);
+  const dispatch = useDispatch();
+
+  const removeAllHistory = () => {
+    const action = actionCreators.removeAllSearchHistory();
+    dispatch(action);
+  };
 
   return (
     <div style={styles["wrapper"]}>
       <div style={styles["header"]}>
         <span style={styles["title"]}>搜索历史</span>
-        <img style={styles["icon"]} src={deleteIcon} alt="删除" />
+        <img
+          style={styles["icon"]}
+          src={deleteIcon}
+          alt="删除"
+          onClick={removeAllHistory}
+        />
       </div>
       <div style={styles["historyContainer"]}>
         {tags.map((tag, index) => (

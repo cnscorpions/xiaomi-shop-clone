@@ -18,3 +18,7 @@ export const addSearchHistory = history => ({
   type: types.ADD_SEARCH_HISTORY,
   payload: history
 });
+
+export const removeAllSearchHistory = () => ({
+  type: types.REMOVE_ALL_SEARCH_HISTORY
+});

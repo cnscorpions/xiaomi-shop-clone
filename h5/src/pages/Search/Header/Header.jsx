@@ -24,10 +24,13 @@ export default function Header() {
   };
 
   const handleKeyEnter = event => {
-    // console.log(event);
+    if (event.key === "Enter") {
+      goToList();
+    }
   };
 
   const goToList = () => {
+    if (!inputValue) return false;
     history.push(`/list?keyword=${encodeURI(inputValue)}`);
     addSearchHistory(inputValue);
   };
@@ -46,7 +49,7 @@ export default function Header() {
         className={styles["search-container-input"]}
         value={inputValue}
         onChange={handleInputChange}
-        onKeyDown={handleKeyEnter}
+        onKeyPress={handleKeyEnter}
         placeholder="搜索商品名称"
       />
       <div className={styles["search-container-user"]} onClick={goToList}>
