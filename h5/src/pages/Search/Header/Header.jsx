@@ -15,7 +15,7 @@ export default function Header() {
   const history = useHistory();
 
   const goBack = () => {
-    history.push("/");
+    history.goBack();
   };
 
   const handleInputChange = event => {
