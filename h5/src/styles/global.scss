@@ -11,6 +11,12 @@ a {
   text-decoration: none;
 }
 
+input[type="text"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /**
 * 水平垂直居中
 */

@@ -1,0 +1,53 @@
+.wrapper {
+  padding: 0 2rem 5rem;
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    & > img {
+      width: 4.8rem;
+    }
+    & > h4 {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      color: #000;
+      font-weight: normal;
+    }
+  }
+  .login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    & > input {
+      margin-bottom: 1rem;
+      padding: 1.6rem 0;
+      border: none;
+      background: none !important;
+      font-size: 1.8rem;
+    }
+    & > input:focus {
+      outline: none;
+    }
+    &-btn {
+      margin-bottom: 1.4rem;
+      padding: 1rem 0;
+      width: 100%;
+      text-align: center;
+      border: none;
+      border-radius: 0.6rem;
+      overflow: hidden;
+      background-color: #ff6700;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+    .icon-eye {
+      position: absolute;
+      right: 0.2rem;
+      bottom: 8rem;
+      width: 2rem;
+    }
+  }
+}

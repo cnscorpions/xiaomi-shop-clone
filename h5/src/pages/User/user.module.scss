@@ -1,0 +1,29 @@
+@import "styles/global.scss";
+
+.wrapper {
+  .login-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 0;
+    background: url(../../assets/user/background.png) center 0 #f37d0f;
+    background-size: auto 100%;
+    & > img {
+      margin: 0 0.8rem 0 1.6rem;
+      width: 4.4rem;
+    }
+    & > span {
+      font-size: 1.2rem;
+      color: #fff;
+    }
+  }
+  .order-box {
+    @include centerIt;
+    justify-content: space-between;
+    padding: 0 1.6rem;
+    height: 4.1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1.5rem;
+  }
+}
