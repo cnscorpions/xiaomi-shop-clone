@@ -6,11 +6,13 @@ import * as styles from "./leftPanel.module.scss";
 const cates = [
   {
     key: "01",
-    text: "新品"
+    text: "新品",
+    anchor: "新品"
   },
   {
     key: "02",
-    text: "众筹"
+    text: "众筹",
+    anchor: "众筹"
   },
   {
     key: "03",
@@ -106,13 +108,15 @@ const cates = [
   }
 ];
 
-export default function LeftPanel() {
+export default function LeftPanel(props) {
   const selector = useSelector(state => state.category.setCate);
   const dispatch = useDispatch();
 
-  const setCateInStore = cate => {
+  const setCateInStore = (cate, anchor) => {
     const action = actionCreators.setCate(cate);
     dispatch(action);
+    const { goScroll } = props;
+    goScroll(anchor);
   };
 
   return (
@@ -126,7 +130,8 @@ export default function LeftPanel() {
                 ? styles["list-item"] + " " + styles["list-item_active"]
                 : styles["list-item"]
             }
-            onClick={() => setCateInStore(cate.key)}
+            anchor={cate.anchor ? cate.anchor : null}
+            onClick={() => setCateInStore(cate.key, cate.anchor)}
           >
             <span className={styles["list-item-text"]}>{cate.text}</span>
           </li>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 import { Routes } from "./router.config";
 
+import Login from "pages/Login/Login";
 import AppLayout from "components/Layout/AppLayout";
 import NotFound from "pages/NotFound/NotFound";
 import LandingPage from "pages/LandingPage/LandingPage";
@@ -26,6 +27,9 @@ export default function AppRouter(props) {
         </Route>
         <Route exact path="/list">
           <List />
+        </Route>
+        <Route exact path="/login">
+          <Login />
         </Route>
         <Route path="*">
           <NotFound />

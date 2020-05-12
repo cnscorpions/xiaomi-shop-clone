@@ -17,7 +17,7 @@ const SectionComponent = props => {
             <img className={styles["banner-img"]} src={section.bannerPath} />
           ) : null}
           <div className={styles["section-title"]}>
-            <span>{section.title}</span>
+            <span title={section.anchor}>{section.title}</span>
           </div>
           <div className={styles["product-container"]}>
             {section.items.map(item => (
@@ -39,6 +39,7 @@ export default function RightPanel() {
       bannerPath: banner01,
       key: "section01",
       title: "手机",
+      anchor: "新品",
       items: [
         {
           key: "section01-item01",
@@ -81,6 +82,7 @@ export default function RightPanel() {
       bannerPath: null,
       key: "section02",
       title: "电脑",
+      anchor: "众筹",
       items: [
         {
           key: "section02-item01",

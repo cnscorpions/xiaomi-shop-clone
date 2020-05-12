@@ -16,11 +16,17 @@ export default function Category() {
     history.push("/search");
   };
 
+  const handleScroll = anchor => {
+    // 获取元素
+    const titleEl = document.querySelector(`span[title=${anchor}]`);
+    // 滚动到特定位置
+  };
+
   return (
     <>
       <Header title={"分类"} goBack={goBack} goSearch={goSearch} />
       <div style={{ marginTop: "5rem" }}>
-        <LeftPanel />
+        <LeftPanel goScroll={handleScroll} />
         <RightPanel />
       </div>
     </>

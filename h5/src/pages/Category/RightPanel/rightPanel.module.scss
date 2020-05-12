@@ -3,6 +3,7 @@
 .wrapper {
   padding-left: 9.5rem;
   padding-right: 1.6rem;
+  scroll-behavior: smooth; // 滚动条缓慢滚动
   .banner-img {
     width: 26rem;
     height: auto;
