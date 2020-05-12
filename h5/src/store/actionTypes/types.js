@@ -13,3 +13,12 @@ export const REMOVE_ALL_SEARCH_HISTORY = "REMOVE_ALL_SEARCH_HISTORY";
 
 // 分类-选择类目
 export const SET_CATE = "SET_CATE";
+
+// Auth - login
+export const LOGIN = "LOGIN";
+export const SIGNUP = "SIGNUP";
+export const OAUTH = "OAUTH";
+
+// 购物车 - 加入购物车
+export const ADD_GOODS_TO_CART = "ADD_GOODS_TO_CART";
+export const REMOVE_GOODS_TO_CART = "REMOVE_GOODS_TO_CART";

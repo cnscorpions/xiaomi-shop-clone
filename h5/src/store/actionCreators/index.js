@@ -27,3 +27,17 @@ export const setCate = cate => ({
   type: types.SET_CATE,
   payload: cate
 });
+
+export const login = () => ({
+  type: types.LOGIN
+});
+
+export const addGoodsToCart = goods => ({
+  type: types.ADD_GOODS_TO_CART,
+  payload: goods
+});
+
+export const removeGoodsFromCart = goods => ({
+  type: types.REMOVE_GOODS_TO_CART,
+  payload: goods
+});

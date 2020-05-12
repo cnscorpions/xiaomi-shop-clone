@@ -1,0 +1,44 @@
+@import "styles/global.scss";
+
+.wrapper {
+  padding-top: 5rem;
+  .call-for-login {
+    @include centerIt;
+    justify-content: space-between;
+    padding: 0 1.6rem;
+    height: 5.4rem;
+    &-left {
+      display: block;
+      font-size: 1.6rem;
+      color: rgba(0, 0, 0, 0.87);
+    }
+    &-right {
+      font-size: 1.25rem;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+  .empty-cart-container {
+    @include centerIt;
+    background: #ebebeb;
+    padding: 1rem;
+    &-icon {
+      margin-right: 1rem;
+      width: 4rem;
+    }
+    &-text {
+      margin-right: 0.8rem;
+      font-size: 1.25rem;
+      color: rgba(0, 0, 0, 0.27);
+    }
+    &-btn {
+      display: inline-block;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      padding: 0 1.25rem;
+      color: rgba(0, 0, 0, 0.87);
+      font-style: normal;
+    }
+  }
+}
