@@ -1,51 +1,50 @@
-import React from "react";
 import Loadable from "react-loadable";
 import Loading from "./Loading";
 
 const Home = Loadable({
   loader: () => import("pages/Home/Home"),
-  loading: Loading
+  loading: Loading,
 });
 
 const Cart = Loadable({
   loader: () => import("pages/Cart/Cart"),
-  loading: Loading
+  loading: Loading,
 });
 
 const Category = Loadable({
   loader: () => import("pages/Category/Category"),
-  loading: Loading
+  loading: Loading,
 });
 
 const Star = Loadable({
   loader: () => import("pages/Star/Star"),
-  loading: Loading
+  loading: Loading,
 });
 
 const User = Loadable({
   loader: () => import("pages/User/User"),
-  loading: Loading
+  loading: Loading,
 });
 
 export const Routes = [
   {
     path: "/",
-    component: Home
+    component: Home,
   },
   {
     path: "/cart",
-    component: Cart
+    component: Cart,
   },
   {
     path: "/category",
-    component: Category
+    component: Category,
   },
   {
     path: "/star",
-    component: Star
+    component: Star,
   },
   {
     path: "/user",
-    component: User
-  }
+    component: User,
+  },
 ];

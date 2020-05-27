@@ -9,15 +9,15 @@ const styles = {
     bottom: "10rem",
     left: "50%",
     marginLeft: "-3.6rem",
-    width: "7.2rem"
-  }
+    width: "7.2rem",
+  },
 };
 
 export default function Star() {
   return (
     <div>
       <Header />
-      <img style={styles["icon"]} src={publicIcon} />
+      <img style={styles["icon"]} alt="icon-star" src={publicIcon} />
     </div>
   );
 }

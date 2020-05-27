@@ -26,7 +26,7 @@ export default function Header() {
         className={styles["search-container-input"]}
         onClick={goToSearchPage}
       >
-        <img src={searchIconPath} />
+        <img src={searchIconPath} alt="搜索" />
         搜索商品名称
       </div>
       <div className={styles["search-container-user"]}>

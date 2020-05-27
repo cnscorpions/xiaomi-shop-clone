@@ -3,12 +3,12 @@ import React from "react";
 const styles = {
   wrapper: {
     display: "flex",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   item: {
     flex: "1",
-    width: "20%"
-  }
+    width: "20%",
+  },
 };
 
 export default function Cate(props) {
@@ -17,7 +17,7 @@ export default function Cate(props) {
   return (
     <div style={styles["wrapper"]}>
       {items.map((item, index) => (
-        <img style={styles["item"]} key={index} src={item.icon} />
+        <img style={styles["item"]} alt="icon" key={index} src={item.icon} />
       ))}
     </div>
   );

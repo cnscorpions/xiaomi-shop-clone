@@ -6,23 +6,31 @@ import pic01 from "assets/category/小米10 青春.png";
 import pic02 from "assets/category/K30 Pro 变焦版.png";
 import pic03 from "assets/category/K30 Pro.png";
 
-const SectionComponent = props => {
+const SectionComponent = (props) => {
   const { sections } = props;
 
   return (
     <>
-      {sections.map(section => (
+      {sections.map((section) => (
         <div key={section.key}>
           {section.bannerPath ? (
-            <img className={styles["banner-img"]} src={section.bannerPath} />
+            <img
+              className={styles["banner-img"]}
+              alt="icon"
+              src={section.bannerPath}
+            />
           ) : null}
           <div className={styles["section-title"]}>
             <span title={section.anchor}>{section.title}</span>
           </div>
           <div className={styles["product-container"]}>
-            {section.items.map(item => (
+            {section.items.map((item) => (
               <div key={item.key} className={styles["product-box"]}>
-                <img className={styles["product-box-img"]} src={item.imgUrl} />
+                <img
+                  className={styles["product-box-img"]}
+                  alt="icon"
+                  src={item.imgUrl}
+                />
                 <span>{item.text}</span>
               </div>
             ))}
@@ -44,39 +52,39 @@ export default function RightPanel() {
         {
           key: "section01-item01",
           imgUrl: pic01,
-          text: "小米10 青春"
+          text: "小米10 青春",
         },
         {
           key: "section01-item02",
           imgUrl: pic02,
-          text: "K30 Pro 变焦版"
+          text: "K30 Pro 变焦版",
         },
         {
           key: "section01-item03",
           imgUrl: pic03,
-          text: "K30 Pro"
+          text: "K30 Pro",
         },
         {
           key: "section01-item04",
           imgUrl: pic01,
-          text: "小米10 青春"
+          text: "小米10 青春",
         },
         {
           key: "section01-item05",
           imgUrl: pic02,
-          text: "K30 Pro 变焦版"
+          text: "K30 Pro 变焦版",
         },
         {
           key: "section01-item06",
           imgUrl: pic03,
-          text: "K30 Pro"
+          text: "K30 Pro",
         },
         {
           key: "section01-item07",
           imgUrl: pic01,
-          text: "小米10 青春"
-        }
-      ]
+          text: "小米10 青春",
+        },
+      ],
     },
     {
       bannerPath: null,
@@ -87,40 +95,40 @@ export default function RightPanel() {
         {
           key: "section02-item01",
           imgUrl: pic01,
-          text: "小米10 青春"
+          text: "小米10 青春",
         },
         {
           key: "section02-item02",
           imgUrl: pic02,
-          text: "K30 Pro 变焦版"
+          text: "K30 Pro 变焦版",
         },
         {
           key: "section02-item03",
           imgUrl: pic03,
-          text: "K30 Pro"
+          text: "K30 Pro",
         },
         {
           key: "section02-item04",
           imgUrl: pic01,
-          text: "小米10 青春"
+          text: "小米10 青春",
         },
         {
           key: "section02-item05",
           imgUrl: pic02,
-          text: "K30 Pro 变焦版"
+          text: "K30 Pro 变焦版",
         },
         {
           key: "section02-item06",
           imgUrl: pic03,
-          text: "K30 Pro"
+          text: "K30 Pro",
         },
         {
           key: "section02-item07",
           imgUrl: pic01,
-          text: "小米10 青春"
-        }
-      ]
-    }
+          text: "小米10 青春",
+        },
+      ],
+    },
   ];
 
   return (

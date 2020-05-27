@@ -6,7 +6,7 @@ import Header from "components/Header/Header";
 import * as styles from "./cart.module.scss";
 import cartIcon from "assets/cart/cart.png";
 
-const CallForLogin = props => {
+const CallForLogin = (props) => {
   const { goLogin } = props;
 
   return (
@@ -17,12 +17,16 @@ const CallForLogin = props => {
   );
 };
 
-const EmptyCart = props => {
+const EmptyCart = (props) => {
   const { goHome } = props;
 
   return (
     <div className={styles["empty-cart-container"]}>
-      <img className={styles["empty-cart-container-icon"]} src={cartIcon} />
+      <img
+        className={styles["empty-cart-container-icon"]}
+        alt="icon"
+        src={cartIcon}
+      />
       <span className={styles["empty-cart-container-text"]}>
         购物车还是空的
       </span>
@@ -35,8 +39,8 @@ const EmptyCart = props => {
 
 export default function Cart() {
   const history = useHistory();
-  const isAuthed = useSelector(state => state.auth.isAuthed);
-  const goods = useSelector(state => state.cart.goods);
+  const isAuthed = useSelector((state) => state.auth.isAuthed);
+  const goods = useSelector((state) => state.cart.goods);
 
   const goBack = () => {
     history.goBack();

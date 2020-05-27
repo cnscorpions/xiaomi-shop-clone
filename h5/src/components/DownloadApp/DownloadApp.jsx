@@ -8,15 +8,15 @@ const styles = {
   container: {
     position: "relative",
     height: "5.2rem",
-    overflow: "hidden"
+    overflow: "hidden",
   },
   img: {
     display: "block",
     width: "100%",
-    height: "auto"
+    height: "auto",
   },
   hide: {
-    display: "none"
+    display: "none",
   },
   close: {
     position: "absolute",
@@ -25,7 +25,7 @@ const styles = {
     display: "inline-block",
     width: "5.2rem",
     height: "5.2rem",
-    background: "transparent"
+    background: "transparent",
   },
   goTo: {
     position: "absolute",
@@ -34,13 +34,13 @@ const styles = {
     display: "inline-block",
     width: "10rem",
     height: "5.2rem",
-    background: "transparent"
-  }
+    background: "transparent",
+  },
 };
 
 export default function DownloadApp() {
   const history = useHistory();
-  const selector = useSelector(state => state.common.isShowDownloadAppBanner);
+  const selector = useSelector((state) => state.common.isShowDownloadAppBanner);
   const dispatch = useDispatch();
 
   const goToLandingPage = () => {
@@ -55,7 +55,7 @@ export default function DownloadApp() {
   return (
     <div style={selector ? styles["container"] : styles["hide"]} to="/download">
       <span style={styles["close"]} onClick={closeBanner} />
-      <img style={styles["img"]} src={DownloadAppImg} />
+      <img style={styles["img"]} alt="" src={DownloadAppImg} />
       <span style={styles["goTo"]} onClick={goToLandingPage} />
     </div>
   );

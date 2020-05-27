@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
+// import { autoPlay } from "react-swipeable-views-utils";
 import Pagination from "./Pagination";
 
 import banner01 from "assets/home/banner01.jpg";
 import banner02 from "assets/home/banner02.jpg";
 import banner03 from "assets/home/banner03.jpg";
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+// autoplay banner
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
   container: {
-    position: "relative"
+    position: "relative",
   },
   slide: {
     minHeight: "18.8rem",
@@ -19,23 +20,23 @@ const styles = {
     backgroundImage: 'url("")',
     backgroundSize: "contain",
     backgroundPosition: "center center",
-    backgroundRepeat: "no-repeat"
+    backgroundRepeat: "no-repeat",
   },
   slide1: {
-    backgroundImage: `url(${banner01})`
+    backgroundImage: `url(${banner01})`,
   },
   slide2: {
-    backgroundImage: `url(${banner02})`
+    backgroundImage: `url(${banner02})`,
   },
   slide3: {
-    backgroundImage: `url(${banner03})`
-  }
+    backgroundImage: `url(${banner03})`,
+  },
 };
 
 export default function Banner() {
   const [index, setIndex] = useState(0);
 
-  const handleChangeIndex = index => {
+  const handleChangeIndex = (index) => {
     setIndex(index);
   };
 

@@ -24,7 +24,7 @@ export default function Login(props) {
     }
   };
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.preventDefault();
     console.log(account, pwd);
   };
@@ -32,7 +32,7 @@ export default function Login(props) {
   return (
     <div className={styles["wrapper"]}>
       <div className={styles["header-container"]}>
-        <img src={miIcon} />
+        <img src={miIcon} alt="小米" />
         <h4>小米帐号登录</h4>
       </div>
       <div>
@@ -40,13 +40,13 @@ export default function Login(props) {
           <input
             id="account"
             value={account}
-            onChange={e => setAccount(e.currentTarget.value)}
+            onChange={(e) => setAccount(e.currentTarget.value)}
             placeholder="邮箱/手机/小米ID"
           />
           <input
             id="password"
             value={pwd}
-            onChange={e => setPwd(e.currentTarget.value)}
+            onChange={(e) => setPwd(e.currentTarget.value)}
             placeholder="密码"
           />
           <button className={styles["login-form-btn"]} onClick={handleClick}>
@@ -55,6 +55,7 @@ export default function Login(props) {
           <img
             className={styles["icon-eye"]}
             src={isPasswordHidden ? eyeIcon : eyeHideIcon}
+            alt=""
             onClick={shiftPwdVisibility}
           />
         </form>
