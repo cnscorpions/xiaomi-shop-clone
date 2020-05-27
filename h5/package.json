@@ -20,9 +20,11 @@
     "source-map-explorer": "^2.4.2"
   },
   "scripts": {
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "git": "git add . && git commit -m",
+    "postgit": "git pull && git push && git status",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
