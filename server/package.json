@@ -4,8 +4,8 @@
     "description": "",
     "main": "app.ts",
     "scripts": {
-        "start": "tsc && node dist/app.js",
         "dev": "ts-node-dev --debug --no-notify src/app.ts",
+        "serve": "tsc && node dist/app.js",
         "watch": "tsc -w",
         "build": "npm run lint && tsc",
         "lint": "eslint --ext js,ts src/* --quiet --fix",
@@ -15,12 +15,18 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@types/cors": "^2.8.6",
         "@types/express": "^4.17.6",
+        "@types/mongoose": "^5.7.21",
         "@types/node": "^14.0.5",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "husky": "^4.2.5",
-        "lint-staged": "^10.2.6"
+        "lint-staged": "^10.2.6",
+        "mongoose": "^5.9.16",
+        "winston": "^3.2.1"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^3.0.1",

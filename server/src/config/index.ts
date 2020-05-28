@@ -11,17 +11,17 @@ if (envFound.error) {
 
 export default {
     /**
-     * Your favorite port
+     * serve port
      */
     port: parseInt(<string>process.env.PORT, 10),
 
     /**
-     * That long string from mlab
+     * database url
      */
     databaseURL: process.env.MONGODB_URI,
 
     /**
-     * Your secret sauce
+     * secret
      */
     jwtSecret: process.env.JWT_SECRET,
 
