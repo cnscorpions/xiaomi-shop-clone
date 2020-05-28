@@ -2,6 +2,9 @@ import express, { Request, Response } from 'express';
 import config from './config/index';
 import logger from './loaders/logger';
 
+// Add a polyfill for the Reflect API
+import 'reflect-metadata';
+
 const startServer = async () => {
     const app: express.Application = express();
 
@@ -19,8 +22,8 @@ const startServer = async () => {
         }
         logger.info(`
         ################################################
-          🛡️  Server listening on port: http://localhost:${config.port} 🛡️ 
-          ################################################
+        🛡️  Server listening on port: ${config.port} 🛡️ 
+        ################################################
         `);
     });
 };
