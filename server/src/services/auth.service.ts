@@ -46,7 +46,7 @@ export default class AuthSerice {
      * 注册
      * @param userDTO
      */
-    public async signUp(userDTO: UserDTO): Promise<{ user: IUser; token: string }> {
+    public async signUp(userDTO: UserDTO): Promise<{ user: IUser; token: string; message: string }> {
         try {
             logger.silly('Hashing password');
             // 生成随机salt
@@ -70,7 +70,7 @@ export default class AuthSerice {
             const user = userRecord.toObject();
             Reflect.deleteProperty(user, 'password');
             Reflect.deleteProperty(user, 'salt');
-            return { user, token };
+            return { user, token, message: '用户注册成功！' };
         } catch (error) {
             logger.error(error);
             throw error;
@@ -82,10 +82,12 @@ export default class AuthSerice {
      * @param email
      * @param pwd
      */
-    public async signIn(email: string, pwd: string): Promise<{ user: IUser; token: string }> {
+    public async signIn(email: string, pwd: string): Promise<{ user: IUser; token: string; message: string }> {
         const userRecord = await userModel.findOne({ email });
         if (!userRecord) {
-            throw new Error('User not registered');
+            logger.info('User not registered');
+            const user = { email, password: pwd };
+            return await this.signUp(user);
         }
         logger.silly('Checking password');
         const { password, salt } = userRecord;
@@ -101,7 +103,7 @@ export default class AuthSerice {
             const user = userRecord.toObject();
             Reflect.deleteProperty(user, 'password');
             Reflect.deleteProperty(user, 'salt');
-            return { user, token };
+            return { user, token, message: '用户登录成功！' };
         } else {
             throw new Error('Invalid Password');
         }

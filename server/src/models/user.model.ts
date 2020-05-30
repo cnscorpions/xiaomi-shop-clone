@@ -3,11 +3,7 @@ import { IUser } from '../interfaces/IUser';
 
 const userSchema = new mongoose.Schema(
     {
-        name: {
-            type: String,
-            required: [true, '请输入名称'],
-            index: true,
-        },
+        name: String,
         email: {
             type: String,
             lowercase: true,
