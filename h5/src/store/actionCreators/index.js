@@ -28,8 +28,9 @@ export const setCate = cate => ({
   payload: cate
 });
 
-export const login = () => ({
-  type: types.LOGIN
+export const login = token => ({
+  type: types.LOGIN,
+  payload: token
 });
 
 export const addGoodsToCart = goods => ({

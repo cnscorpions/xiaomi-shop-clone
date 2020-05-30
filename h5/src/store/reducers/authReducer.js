@@ -2,14 +2,15 @@ import { createReducer } from "./reducerCreator";
 import * as types from "../actionTypes/types";
 
 const initialState = {
-  isAuthed: false
+  isAuthed: false,
+  token: null
 };
 
 const AuthReducer = createReducer(initialState, {
   [types.LOGIN]: (state = initialState, action) => {
     return {
-      ...state,
-      isAuthed: true
+      isAuthed: true,
+      token: action.payload
     };
   }
 });

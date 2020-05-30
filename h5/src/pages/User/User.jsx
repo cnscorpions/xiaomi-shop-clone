@@ -1,16 +1,15 @@
 import React from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import userIcon from "assets/user/avatar.png";
 
 import * as styles from "./user.module.scss";
 
 export default function User() {
-  // const history = useHistory();
+  const history = useHistory();
 
   const goLogin = () => {
-    alert("modal提示同意服务条款");
-    // history.push("/login");
+    history.push("/login");
   };
 
   return (
